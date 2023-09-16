@@ -16,6 +16,12 @@ function getComputerChoice () {
 let playerWins = 0
 let computerWins = 0
 
+const resultContainer = document.querySelector("#resultContainer")
+
+function refreshPage () {
+    location.reload()
+}
+
 function playRound () {
 
     let player = this.value
@@ -23,6 +29,8 @@ function playRound () {
     let h1Result = document.querySelector('h1')
     let pPlayerWins = document.querySelector('#playerWins')
     let pComputerWins = document.querySelector('#computerWins')
+
+    const buttonRestart = document.createElement('button')
 
     console.log(player)
     console.log(computer)
@@ -38,7 +46,13 @@ function playRound () {
         playerWins += 1,
         pPlayerWins.textContent = "Player Wins: " + playerWins
             if (playerWins === 5) {
-                h1Result.textContent= "Player Wins the Best of 5!"
+                h1Result.textContent= "Player Wins the Best of 5! Would you like to Restart?"
+                buttonRestart.textContent = "Yes!"
+                buttonRestart.addEventListener('click', refreshPage)
+                resultContainer.appendChild(buttonRestart)
+                rockButton.removeEventListener('click', playRound)
+                paperButton.removeEventListener('click', playRound)
+                scissorsButton.removeEventListener('click', playRound)
         }   
     } else if (player === "rock" && computer === "paper") {
         // return "You Lose!",
@@ -47,7 +61,13 @@ function playRound () {
         computerWins += 1,
         pComputerWins.textContent = "Computer Wins: " + computerWins
             if (computerWins === 5) {
-                h1Result.textContent= "Computer Wins the Best of 5!"
+                h1Result.textContent= "Computer Wins the Best of 5! Would you like to Restart?"
+                buttonRestart.textContent = "Yes!"
+                buttonRestart.addEventListener('click', refreshPage)
+                resultContainer.appendChild(buttonRestart)
+                rockButton.removeEventListener('click', playRound)
+                paperButton.removeEventListener('click', playRound)
+                scissorsButton.removeEventListener('click', playRound)
         }  
     }
 
@@ -62,7 +82,13 @@ function playRound () {
         playerWins += 1,
         pPlayerWins.textContent = "Player Wins: " + playerWins
             if (playerWins === 5) {
-                h1Result.textContent= "Player Wins the Best of 5!"
+                h1Result.textContent= "Player Wins the Best of 5! Would you like to Restart?"
+                buttonRestart.textContent = "Yes!"
+                buttonRestart.addEventListener('click', refreshPage)
+                resultContainer.appendChild(buttonRestart)
+                rockButton.removeEventListener('click', playRound)
+                paperButton.removeEventListener('click', playRound)
+                scissorsButton.removeEventListener('click', playRound)
         }   
     } else if (player === "paper" && computer === "scissors") {
         // return "You Lose!",
@@ -71,7 +97,13 @@ function playRound () {
         computerWins += 1,
         pComputerWins.textContent = "Computer Wins: " + computerWins
             if (computerWins === 5) {
-                h1Result.textContent= "Computer Wins the Best of 5!"
+                h1Result.textContent= "Computer Wins the Best of 5! Would you like to Restart?"
+                buttonRestart.textContent = "Yes!"
+                buttonRestart.addEventListener('click', refreshPage)
+                resultContainer.appendChild(buttonRestart)
+                rockButton.removeEventListener('click', playRound)
+                paperButton.removeEventListener('click', playRound)
+                scissorsButton.removeEventListener('click', playRound)
         } 
     }
 
@@ -86,7 +118,13 @@ function playRound () {
         playerWins += 1,
         pPlayerWins.textContent = "Player Wins: " + playerWins
         if (playerWins === 5) {
-                h1Result.textContent= "Player Wins the Best of 5!"
+                h1Result.textContent= "Player Wins the Best of 5! Would you like to Restart?"
+                buttonRestart.textContent = "Yes!"
+                buttonRestart.addEventListener('click', refreshPage)
+                resultContainer.appendChild(buttonRestart)
+                rockButton.removeEventListener('click', playRound)
+                paperButton.removeEventListener('click', playRound)
+                scissorsButton.removeEventListener('click', playRound)
         }   
     } else if (player === "scissors" && computer === "rock") {
         // return "You Lose!",
@@ -95,7 +133,13 @@ function playRound () {
         computerWins += 1,
         pComputerWins.textContent = "Computer Wins: " + computerWins
             if (computerWins === 5) {
-                h1Result.textContent= "Computer Wins the Best of 5!"
+                h1Result.textContent= "Computer Wins the Best of 5! Would you like to Restart?"
+                buttonRestart.textContent = "Yes!"
+                buttonRestart.addEventListener('click', refreshPage)
+                resultContainer.appendChild(buttonRestart)
+                rockButton.removeEventListener('click', playRound)
+                paperButton.removeEventListener('click', playRound)
+                scissorsButton.removeEventListener('click', playRound)
         } 
     }
    
