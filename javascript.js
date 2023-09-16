@@ -13,53 +13,90 @@ function getComputerChoice () {
 
 // console.log(getComputerChoice())
 
+let playerWins = 0
+let computerWins = 0
+
 function playRound () {
+
     let player = this.value
     let computer = getComputerChoice()
     let h1Result = document.querySelector('h1')
+    let pPlayerWins = document.querySelector('#playerWins')
+    let pComputerWins = document.querySelector('#computerWins')
 
     console.log(player)
     console.log(computer)
+
     if (player === "rock" && computer === "rock") {
-        return "You Tied!",
+        // return "You Tied!",
         h1Result.textContent = "Result: ",
         h1Result.textContent += "You Tied!"
     } else if (player === "rock" && computer === "scissors") {
-        return "You Win!",
+        // return "You Win!",
         h1Result.textContent = "Result: ",
-        h1Result.textContent += "You Won!"
+        h1Result.textContent += "You Won!",
+        playerWins += 1,
+        pPlayerWins.textContent = "Player Wins: " + playerWins
+            if (playerWins === 5) {
+                h1Result.textContent= "Player Wins the Best of 5!"
+        }   
     } else if (player === "rock" && computer === "paper") {
-        return "You Lose!",
+        // return "You Lose!",
         h1Result.textContent = "Result: ",
-        h1Result.textContent += "You Lost!"
+        h1Result.textContent += "You Lost!",
+        computerWins += 1,
+        pComputerWins.textContent = "Computer Wins: " + computerWins
+            if (computerWins === 5) {
+                h1Result.textContent= "Computer Wins the Best of 5!"
+        }  
     }
 
     if (player === "paper" && computer === "paper") {
-        return "You Tied!",
+        // return "You Tied!",
         h1Result.textContent = "Result: ",
         h1Result.textContent += "You Tied!"
     } else if (player === "paper" && computer === "rock") {
-        return "You Win!",
+        // return "You Win!",
         h1Result.textContent = "Result: ",
-        h1Result.textContent += "You Won!"
+        h1Result.textContent += "You Won!",
+        playerWins += 1,
+        pPlayerWins.textContent = "Player Wins: " + playerWins
+            if (playerWins === 5) {
+                h1Result.textContent= "Player Wins the Best of 5!"
+        }   
     } else if (player === "paper" && computer === "scissors") {
-        return "You Lose!",
+        // return "You Lose!",
         h1Result.textContent = "Result: ",
-        h1Result.textContent += "You Lost!"
+        h1Result.textContent += "You Lost!",
+        computerWins += 1,
+        pComputerWins.textContent = "Computer Wins: " + computerWins
+            if (computerWins === 5) {
+                h1Result.textContent= "Computer Wins the Best of 5!"
+        } 
     }
 
     if (player === "scissors" && computer === "scissors") {
-        return "You Tied!",
+        // return "You Tied!",
         h1Result.textContent = "Result: ",
         h1Result.textContent += "You Tied!"
     } else if (player === "scissors" && computer === "paper") {
-        return "You Win!",
+        // return "You Win!",
         h1Result.textContent = "Result: ",
-        h1Result.textContent += "You Won!"
+        h1Result.textContent += "You Won!",
+        playerWins += 1,
+        pPlayerWins.textContent = "Player Wins: " + playerWins
+        if (playerWins === 5) {
+                h1Result.textContent= "Player Wins the Best of 5!"
+        }   
     } else if (player === "scissors" && computer === "rock") {
-        return "You Lose!",
+        // return "You Lose!",
         h1Result.textContent = "Result: ",
-        h1Result.textContent += "You Lost!"
+        h1Result.textContent += "You Lost!",
+        computerWins += 1,
+        pComputerWins.textContent = "Computer Wins: " + computerWins
+            if (computerWins === 5) {
+                h1Result.textContent= "Computer Wins the Best of 5!"
+        } 
     }
    
 }
